@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="780.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.statistics.StatisticsOverviewController">
+   <children>
+      <Label layoutX="32.0" layoutY="88.0" prefHeight="48.0" prefWidth="464.0" text="Statistics">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="32.0" layoutY="216.0" prefHeight="262.0" prefWidth="503.0">
+        <columns>
+          <TableColumn fx:id="statisticsid" prefWidth="35.0" text="ID" />
+            <TableColumn fx:id="timestamp" prefWidth="183.0" text="Timestamp" />
+           <TableColumn fx:id="win" prefWidth="31.0" text="Win" />
+          <TableColumn fx:id="goals" prefWidth="39.0" text="Goals" />
+            <TableColumn fx:id="conceded" prefWidth="41.0" text="Lost" />
+            <TableColumn fx:id="overallstrength" prefWidth="98.0" text="Overallstrength" />
+            <TableColumn fx:id="setup" prefWidth="73.0" text="Setup" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchfield" layoutX="32.0" layoutY="169.0" prefHeight="33.0" prefWidth="204.0" promptText="Search.." visible="false" />
+      <Text fill="#00000085" strokeType="OUTSIDE" strokeWidth="0.0" text="All Your Matches">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <LineChart fx:id="goalsChart" layoutX="32.0" layoutY="485.0" prefHeight="281.0" prefWidth="503.0" title="Goals over Time">
+        <xAxis>
+          <CategoryAxis fx:id="dateAxis" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <PieChart fx:id="winLoss" layoutX="632.0" layoutY="241.0" prefHeight="244.0" prefWidth="299.0" />
+   </children>
+</Pane>

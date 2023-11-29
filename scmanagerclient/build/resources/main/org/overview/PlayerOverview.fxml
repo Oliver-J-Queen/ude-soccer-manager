@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1035.0" style="-fx-background-color: #0066CC;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.overview.PlayerOverviewController">
+   <children>
+      <Label layoutX="43.0" layoutY="30.0" prefHeight="48.0" prefWidth="464.0" text="Player Catalogue" textFill="WHITE">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="43.0" layoutY="135.0" prefHeight="758.0" prefWidth="970.0">
+        <columns>
+          <TableColumn fx:id="col_name" prefWidth="170.0" text="Name" />
+            <TableColumn fx:id="col_pos" prefWidth="150.0" text="Position" />
+           <TableColumn fx:id="col_strength" prefWidth="58.0" text="Strength" />
+          <TableColumn fx:id="col_club" prefWidth="334.0" text="Club" />
+            <TableColumn fx:id="col_age" prefWidth="42.0" text="Age" />
+            <TableColumn fx:id="col_nat" prefWidth="215.0" text="Nationality" />
+        </columns>
+      </TableView>
+      <TextField fx:id="searchfield" layoutX="42.0" layoutY="80.0" prefHeight="33.0" prefWidth="204.0" promptText="Search.." />
+      <ImageView fitHeight="14.0" fitWidth="19.0" layoutX="226.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/search.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

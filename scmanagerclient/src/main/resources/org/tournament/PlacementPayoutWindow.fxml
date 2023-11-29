@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tournament.PayoutWindowController">
+   <children>
+      <Label fx:id="PLACEMENT" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="101.0" prefHeight="89.0" prefWidth="600.0" text="You placed, better luck next time big man." textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="WINNINGS" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" prefHeight="70.0" prefWidth="600.0" text="You won SEPS." textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="Accept" layoutX="283.0" layoutY="354.0" mnemonicParsing="false" onAction="#close" text="OK" />
+   </children>
+</AnchorPane>

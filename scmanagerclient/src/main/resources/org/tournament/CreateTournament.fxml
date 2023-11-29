@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tournament.TournamentCreationController">
+   <children>
+      <TextField fx:id="NAMEFIELD" layoutX="325.0" layoutY="43.0" />
+      <ChoiceBox fx:id="set_MAXPLAYERS" layoutX="324.0" layoutY="80.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="set_ENTRYFEE" layoutX="324.0" layoutY="119.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="set_GAMEMODE" layoutX="324.0" layoutY="157.0" prefWidth="150.0" />
+      <Label layoutX="79.0" layoutY="40.0" prefHeight="31.0" prefWidth="165.0" text="Tournament Name">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="77.0" prefHeight="31.0" prefWidth="165.0" text="Max Players">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="116.0" prefHeight="31.0" prefWidth="165.0" text="Entry Fee">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="79.0" layoutY="154.0" prefHeight="31.0" prefWidth="165.0" text="Mode">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="createTOURNAMENT" layoutX="265.0" layoutY="211.0" mnemonicParsing="false" onAction="#createTournament" text="Create Tournament" />
+      <Label fx:id="creationStatus" layoutX="230.0" layoutY="194.0" prefHeight="17.0" prefWidth="179.0" />
+   </children>
+</Pane>

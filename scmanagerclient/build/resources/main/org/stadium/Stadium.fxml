@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.stadium.StadiumController">
+    <children>
+        <Pane fx:id="pn_stadium" prefHeight="907.0" prefWidth="1035.0" style="-fx-background-color: #4ecc6f;">
+            <children>
+                <Button fx:id="btn_stadiumname" layoutX="385.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#SaveEntered" onMouseExited="#SaveExited" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #0066cc;" text="Save" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Text fx:id="stadiumname" layoutX="70.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="409.13671875">
+                    <font>
+                        <Font name="Arial Bold" size="41.0" />
+                    </font>
+                </Text>
+                <TextField id="txt_username" fx:id="txt_stadiumname" editable="true" layoutX="70.0" layoutY="140.0" onMouseClicked="#clearStadiumName" onMouseEntered="#mouseEnteredStadiumName" onMouseExited="#mouseExitedStadiumName" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #0066CC; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2;" text="Please enter your name" />
+                <Text fx:id="txt_changelog" layoutX="70.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="300.0" />
+                <Text fx:id="txt_imbis" layoutX="127.0" layoutY="671.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="172.0" />
+                <Text fx:id="txt_parking" layoutX="442.0" layoutY="670.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="184.0" />
+                <Text fx:id="txt_capacity" layoutX="754.0" layoutY="669.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="184.0" />
+                <Button fx:id="btn_refresh" layoutX="952.0" layoutY="857.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="0.0" prefWidth="56.0" text="Refresh" />
+                <Button fx:id="btn_upgradeImbis" layoutX="127.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#ImbisEntered" onMouseExited="#ImbisExited" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #0066cc;" text="Upgrade Imbis" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn_upgradeParking" layoutX="442.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#ParkingEntered" onMouseExited="#ParkingExited" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #0066cc;" text="Upgrade Parking" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btn_upgradeCapacity" layoutX="754.0" layoutY="607.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#CapacityEntered" onMouseExited="#CapacityExited" prefHeight="40.0" prefWidth="151.0" style="-fx-background-color: #0066cc;" text="Upgrade Capacity" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="418.0" layoutY="379.0">
+                    <image>
+                        <Image url="@../../images/car.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="730.0" layoutY="379.0">
+                    <image>
+                        <Image url="@../../images/stadium.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="103.0" layoutY="379.0">
+                    <image>
+                        <Image url="@../../images/stall.png" />
+                    </image>
+                </ImageView>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Pane>
+    </children>
+</AnchorPane>

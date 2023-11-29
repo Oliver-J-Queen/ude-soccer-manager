@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0" prefWidth="416.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.errormessages.ErrorMessageController">
+   <children>
+      <Button fx:id="close" layoutX="186.0" layoutY="64.0" mnemonicParsing="false" onAction="#close" text="Close" />
+      <Text layoutX="92.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="You dont have the facilities for that big man" />
+   </children>
+</AnchorPane>

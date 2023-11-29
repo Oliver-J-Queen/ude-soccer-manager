@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="895.0" prefWidth="1282.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.mainmenu.UserPanelController">
+   <children>
+      <Pane fx:id="pn_messages" layoutX="225.0" layoutY="20.0" prefHeight="880.0" prefWidth="1055.0" style="-fx-background-color: #0099cc;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="45.0">
+         <effect>
+            <DropShadow />
+         </effect></Pane>
+      <Pane fx:id="pn_player" layoutX="225.0" layoutY="67.0" prefHeight="833.0" prefWidth="1055.0" style="-fx-background-color: #bcd654;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0" />
+      <Pane fx:id="pn_home" layoutX="225.0" prefHeight="900.0" prefWidth="1055.0" style="-fx-background-color: #4ecc6f;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="45.0">
+         <effect>
+            <DropShadow />
+         </effect></Pane>
+      <Pane fx:id="pn_club" layoutX="225.0" layoutY="41.0" prefHeight="859.0" prefWidth="1055.0" style="-fx-background-color: #f7bed8;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="225.0" AnchorPane.topAnchor="45.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox prefHeight="48.0" prefWidth="1055.0">
+               <children>
+                  <SplitMenuButton fx:id="tactic" alignment="CENTER" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="56.0" prefWidth="263.4" text="Tactics">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="4-4-2" />
+                      <MenuItem mnemonicParsing="false" text="5-4-1" />
+                        <MenuItem mnemonicParsing="false" text="3-4-3" />
+                        <MenuItem mnemonicParsing="false" text="4-3-3" />
+                        <MenuItem mnemonicParsing="false" text="3-5-2" />
+                    </items>
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </SplitMenuButton>
+                  <Button fx:id="statistics" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="263.4" text="Statistics">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="shop" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="263.4" text="Shop">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="settings" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="68.0" prefWidth="263.4" text="Settings">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Pane fx:id="pn_field" layoutX="9.0" layoutY="52.0" prefHeight="797.0" prefWidth="570.0">
+               <children>
+                  <ImageView fx:id="field" fitHeight="543.0" fitWidth="775.0" layoutX="-192.0" layoutY="127.0" onDragDetected="#handleButtonAction" rotate="90.0" x="90.0">
+                     <image>
+                        <Image url="@../../images/field.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pn_settings" layoutX="10.0" layoutY="58.0" prefHeight="791.0" prefWidth="1039.0" style="-fx-background-color: #f7bed8;">
+               <children>
+                  <TextField id="txt_username" fx:id="txt_clubname" editable="true" layoutX="305.0" layoutY="189.0" prefHeight="40.0" prefWidth="300.0" style="-fx-border-color: #0066CC; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 2;" text="Club name" />
+                  <Button fx:id="btn_changeTeam" layoutX="650.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: #0066CC;" text="Change" textFill="WHITE" />
+                  <Button id="button_cancle" fx:id="btn_backTeam" cancelButton="true" layoutX="311.0" layoutY="285.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #0066CC;" text="Back" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="button_cancle" fx:id="btn_createTeam" cancelButton="true" layoutX="475.0" layoutY="285.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #0066CC;" text="Create" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="pn_welcome" prefHeight="855.0" prefWidth="1057.0" style="-fx-background-color: #f7bed8;">
+               <children>
+                  <Label layoutX="301.0" layoutY="226.0" prefHeight="95.0" prefWidth="456.0" text="You do not have a team yet?">
+                     <font>
+                        <Font name="Arial Bold" size="32.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="welcome_createTeam" layoutX="449.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="54.0" prefWidth="160.0" text="Create team" />
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="pn_menu" prefHeight="900.0" prefWidth="227.0" style="-fx-background-color: #0066CC;" AnchorPane.topAnchor="0.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Button fx:id="signOut" alignment="BASELINE_LEFT" graphicTextGap="15.0" layoutX="18.0" layoutY="838.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#SignOutEntered" onMouseExited="#SignOutExited" prefHeight="48.0" prefWidth="190.0" style="-fx-background-color: #0066CC;" text="Sign Out" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="32.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Arial Bold Italic" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="home" layoutY="220.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#HomeEntered" onMouseExited="#HomeExited" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="33.0" layoutY="22.0">
+               <image>
+                  <Image url="@../../images/ball.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="messages" layoutY="260.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#MessagesEntered" onMouseExited="#MessagesExited" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Messages" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="club" layoutY="300.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#ClubEntered" onMouseExited="#ClubExited" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Club" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="player" layoutY="340.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseEntered="#PlayerEntered" onMouseExited="#PlayerExited" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Player" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="380.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Schedule" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="420.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Empty" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutY="460.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Empty" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="profilsettings" layoutY="500.0" mnemonicParsing="false" onAction="#editProfile" onMouseEntered="#ProfilSettingsEntered" onMouseExited="#ProfilSettingsExited" prefHeight="27.0" prefWidth="225.0" style="-fx-background-color: #0066CC;" text="Profil Settings" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+            </Button>
+            <Separator layoutY="253.0" opacity="0.18" prefHeight="2.0" prefWidth="227.0">
+               <effect>
+                  <DropShadow spread="0.32" />
+               </effect>
+            </Separator>
+            <Separator layoutY="293.0" opacity="0.18" prefHeight="2.0" prefWidth="227.0">
+               <effect>
+                  <DropShadow spread="0.32" />
+               </effect>
+            </Separator>
+            <Separator layoutY="493.0" opacity="0.18" prefHeight="2.0" prefWidth="227.0">
+               <effect>
+                  <DropShadow spread="0.32" />
+               </effect>
+            </Separator>
+            <Text fill="WHITE" layoutX="14.0" layoutY="827.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points:" />
+            <Text fx:id="pointsText" fill="WHITE" layoutX="57.0" layoutY="827.0" strokeType="OUTSIDE" strokeWidth="0.0" text="******" wrappingWidth="84.208984375" />
+            <Button fx:id="pointsButton" layoutX="152.0" layoutY="813.0" mnemonicParsing="false" onAction="#showPoints" text="Show Points">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="226.0" layoutY="1.0" prefHeight="42.0" prefWidth="1056.0" style="-fx-background-color: #0066CC;" AnchorPane.bottomAnchor="856.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

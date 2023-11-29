@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.home.HomeController">
+    <children>
+        <Pane fx:id="pn_home" prefHeight="907.0" prefWidth="1035.0" style="-fx-background-color: #4ecc6f;">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+            <Circle fill="DODGERBLUE" layoutX="687.0" layoutY="185.0" radius="74.0" stroke="BLACK" strokeType="INSIDE" />
+                <Text fx:id="showname" layoutX="95.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="222.291015625">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </Text>
+                <Text layoutX="95.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Mail" wrappingWidth="57.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+                <Text layoutX="95.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" wrappingWidth="57.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+                <Text layoutX="95.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SEP" wrappingWidth="57.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+                <Separator layoutX="164.0" layoutY="140.0" opacity="0.6" orientation="VERTICAL" prefHeight="93.0" prefWidth="15.0">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Separator>
+                <Text fx:id="showmail" layoutX="191.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="387.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+                <Text fx:id="showid" layoutX="191.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="387.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+                <Text fx:id="showpoints" layoutX="191.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="387.291015625">
+                    <font>
+                        <Font name="System Bold" size="17.0" />
+                    </font>
+                </Text>
+            <ImageView fx:id="dragon" fitHeight="100.0" fitWidth="100.0" layoutX="637.0" layoutY="135.0">
+               <image>
+                  <Image url="@../../images/dragon.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="giraf" fitHeight="100.0" fitWidth="100.0" layoutX="637.0" layoutY="135.0">
+               <image>
+                  <Image url="@../../images/giraffe.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="police" fitHeight="100.0" fitWidth="100.0" layoutX="637.0" layoutY="135.0">
+               <image>
+                  <Image url="@../../images/police.png" />
+               </image>
+            </ImageView>
+            <ChoiceBox fx:id="pictures" layoutX="814.0" layoutY="152.0" prefWidth="150.0" />
+            <Button fx:id="save" layoutX="814.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="150.0" text="Save" />
+            <Text fx:id="output" layoutX="814.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="168.13671875" />
+            <Text layoutX="814.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your avatar" wrappingWidth="168.13671875">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>
