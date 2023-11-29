@@ -1,3 +1,3 @@
-# Gruppe 4
+# Soccer Manager Project UDE Group 4
 
-Die .gitignore-Datei nicht(!) löschen
+I worked on this project as a group member and was involved in all aspects of this project.
